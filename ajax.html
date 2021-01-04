@@ -20,10 +20,10 @@
                 function (reponse) {
                     for (var index = 0; index < reponse.data.length; index++) {
                         document.getElementById('reponseApi').innerHTML += `<li class='list-group-item '>
-                            <div class='d-flex justify-content-between align-items-center'>
-                                <span>${reponse.data[index].name}</span>  
+                            <a target="_blank" class='text-decoration-none text-dark d-flex justify-content-between align-items-center' href="https://www.google.fr/search?q=${reponse.data[index].name}">
+                                <span class='fw-bold'>${reponse.data[index].name}</span>  
                                 <img class='img-fluid w-25 shadow' src='${reponse.data[index].flag}' />
-                            </div>
+                            </a>
                         </li>`;
                     }
                 }
