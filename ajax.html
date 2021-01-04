@@ -12,14 +12,19 @@
 
 <body>
     <div class="container-fluid pt-3">
-        <ul class="list-group" id="reponseApi"></ul>
+        <ul class="list-group shadow" id="reponseApi"></ul>
     </div>
     <script>
         function listPosts() {
             axios.get('https://restcountries.eu/rest/v2/all').then(
                 function (reponse) {
                     for (var index = 0; index < reponse.data.length; index++) {
-                        document.getElementById('reponseApi').innerHTML += "<li class='list-group-item'><div class='d-flex justify-content-between align-items-center'>"+reponse.data[index].name+"<img class='img-fluid w-25' src='"+reponse.data[index].flag+"' /></div></li>";
+                        document.getElementById('reponseApi').innerHTML += `<li class='list-group-item '>
+                            <div class='d-flex justify-content-between align-items-center'>
+                                <span>${reponse.data[index].name}</span>  
+                                <img class='img-fluid w-25 shadow' src='${reponse.data[index].flag}' />
+                            </div>
+                        </li>`;
                     }
                 }
             );
