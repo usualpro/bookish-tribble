@@ -21,7 +21,7 @@
                     for (var index = 0; index < reponse.data.length; index++) {
                         document.getElementById('reponseApi').innerHTML += `<li class='list-group-item '>
                             <a target="_blank" class='text-decoration-none text-dark d-flex justify-content-between align-items-center' href="https://www.google.fr/search?q=${reponse.data[index].name}">
-                                <span class='fw-bold'>${reponse.data[index].name}</span>  
+                                <span class='fw-bold'>${reponse.data[index].name} ${reponse.data[index].demonym}</span>  
                                 <img class='img-fluid w-25 shadow' src='${reponse.data[index].flag}' />
                             </a>
                         </li>`;
